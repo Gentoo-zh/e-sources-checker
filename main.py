@@ -86,7 +86,7 @@ class VersionNumber():
     def __eq__(self, other):
         return self._verobj == other._verobj
 
-    def _lt__(self, other):
+    def __lt__(self, other):
         return self._verobj < other._verobj
 
     def __str__(self):

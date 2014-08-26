@@ -79,6 +79,7 @@ class VersionNumber():
 
             if val.isdigit():
                 self._verobj = LooseVersion(version_string[idx:])
+                break
 
     def __gt__(self, other):
         return self._verobj > other._verobj

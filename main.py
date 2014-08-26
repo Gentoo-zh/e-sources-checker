@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-from sys import argv
+from sys import argv, stdout
 import re
 
 import pycurl
@@ -126,6 +126,7 @@ if __name__ == "__main__":
 
     for patch in PATCHES:
         print("checking %s..." % patch["name"], end="")
+        stdout.flush()
 
         # init replace table
         table = ReplaceTable()
